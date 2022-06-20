@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "0ee2a027-62fb-4b84-bcd3-dff812c0a805",
+		"name": "pruebaPlaceHolder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18770445"
+	},
+	"item": [
+		{
+			"name": "EndPoint posts",
+			"item": [
+				{
+					"name": "Consulta EndPoint posts ID=10",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts?id=10",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar todos los registros del endPoint posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://jsonplaceholder.typicode.com/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nuevo registro en el EndPoint posts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-type",
+								"value": "application/json; charset=UTF-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Prueba Jesus\",\r\n    \"body\": \"Esto es una Prueba\",\r\n    \"userId\": \"120\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://jsonplaceholder.typicode.com/posts"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EndPoint comments",
+			"item": [
+				{
+					"name": "Consultar EndPoint comments registro 499",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/comments?id=499",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "499"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizacion de registro 499 endpoint comments",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-type",
+								"value": "application/json; charset=UTF-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Jesus A Pilarte\",\r\n        \"email\": \"jesuspilarte@prueba.com\",\r\n        \"body\": \"Esto es una prueba\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://jsonplaceholder.typicode.com/comments/499"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nuevo registro ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-type",
+								"value": "application/json; charset=UTF-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"postId\": 600,\r\n        \"id\": 501,\r\n        \"name\": \"Juan Manuel Aquino Perez\",\r\n        \"email\": \"juan_perez@prueba.com\",\r\n        \"body\": \"Esto es una prueba automatizada\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://jsonplaceholder.typicode.com/comments"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
